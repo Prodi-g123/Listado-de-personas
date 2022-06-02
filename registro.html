@@ -16,75 +16,51 @@
 
         <div class="col">
             <div class="shadow-lg p-3 mb-3 mt-4 bg-body rounded">
-                <form class="row g-3 needs-validation" novalidate>
+                <form class="row g-3 needs-validation" >
                     <div class="col-md-6 position-relative">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" required>
-                        <div class="invalid-tooltip">Porfavor llene el campo</div>
+                        <input type="text" class="form-control" id="nombre">
+                        <div class="text-danger" id="error-nombre"> </div>
                     </div>
                     <div class="col-md-6 position-relative">
                         <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="telefono" required>
-                        <div class="invalid-tooltip">Porfavor llene el campo</div>
+                        <input type="text" class="form-control" id="telefono">
+                        <div class="text-danger" id="error-telefono"> </div>
                     </div>
                     <div class="col-md-6 position-relative">
                         <label for="correo" class="form-label">Correo electrónico</label>
-                        <input type="text" class="form-control" id="correo" required>
-                        <div class="invalid-tooltip">Porfavor llene el campo</div>
+                        <input type="text" class="form-control" id="correo">
+                        <div class="text-danger" id="error-correo"> </div>
                     </div>
                     <div class="col-md-6 position-relative">
-                        <label for="puesto" class="form-label">puesto</label>
-                        <input type="text" class="form-control" id="puesto" required>
-                        <div class="invalid-tooltip">Porfavor llene el campo</div>
+                        <label for="puesto" class="form-label">Puesto</label>
+                        <input type="text" class="form-control" id="puesto">
+                        <div class="text-danger" id="error-puesto"> </div>
                     </div>
                     <div class="col-md-6 position-relative">
                         <label for="fecha-nacimiento" class="form-label">Fecha de nacimiento</label>
-                        <input type="date" class="form-control" id="fecha-nacimiento" required>
-                        <div class="invalid-tooltip">Porfavor llene el campo</div>
+                        <input type="date" class="form-control" id="fecha-nacimiento">
+                        <div class="text-danger" id="error-fecha-nacimiento"> </div>
                     </div>
                     <div class="col-md-6 position-relative">
                         <label for="fecha-registro" class="form-label">Fecha de registro</label>
-                        <input type="date" class="form-control" id="fecha-registro" required>
-                        <div class="invalid-tooltip">Porfavor llene el campo</div>
+                        <input type="date" class="form-control" id="fecha-registro">
+                        <div class="text-danger" id="error-fecha-registro"> </div>
                     </div>
                     <div class="col-md-15 position-relative">
                         <label for="Responsabilidades" class="form-label">Responsabilidades</label>
-                        <input type="text" class="form-control" id="Responsabilidades" required>
-                        <div class="invalid-tooltip">Porfavor llene el campo</div>
+                        <input type="text" class="form-control" id="responsabilidades">
+                        <div class="text-danger" id="error-responsabilidades"> </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary fw-bold " style="width:25%">Registrar</button>
+                        <button id="btn-registrar" type="button" class="btn btn-primary fw-bold" style="width:25%">Registrar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
-            'use strict'
+    <script src="registro.js"></script>
 
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    } else {
-                        alert("El empleado fue registrado con éxito")
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script>
 </body>
 
 </html>
